@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewAllActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_name"
+        android:text="@string/movie_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_15"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divisionline1"
+        android:background="#dcdcdc"
+        android:layout_below="@+id/movie_name"
+        android:layout_marginBottom="10dp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbar"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4.435"
+        android:stepSize="0.001"
+        android:max="5"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_toLeftOf="@+id/movie_rating_number"
+        android:layout_alignBottom="@+id/rating_voter_number"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_rating_number"
+        android:text="@string/movie_rating_number"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/rating_voter_number"
+        android:layout_alignBottom="@+id/rating_voter_number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_voter_number"
+        android:text="@string/rating_voter_number"
+        android:layout_below="@+id/divisionline1"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/divisionline2"
+        android:background="#dcdcdc"
+        android:layout_below="@+id/rating_voter_number"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divisionline2"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_review_title"
+            android:text="한줄평"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_review_image"
+            android:src="@drawable/ic_review_selected"
+            android:layout_toLeftOf="@+id/movie_review_write_button"
+            android:layout_alignBottom="@+id/movie_review_write_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:id="@+id/movie_review_write_button"
+            android:text="작성하기"
+            android:textColor="#d2691e"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="#00ff0000"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/movie_review_listview"
+            android:layout_below="@+id/movie_review_title" />
+    </RelativeLayout>
+</RelativeLayout>

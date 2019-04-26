@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieReviewWriteActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_name"
+        android:text="@string/movie_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_15"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divisionline"
+        android:background="#dcdcdc"
+        android:layout_below="@+id/movie_name"
+        android:layout_marginBottom="10dp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbar"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5"
+        android:max="5"
+        android:layout_below="@+id/divisionline"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbar_help"
+        android:text="평점을 입력해 주세요"
+        android:textSize="20sp"
+        android:layout_below="@+id/ratingbar"
+        android:layout_centerInParent="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/movie_review_edittext"
+        android:hint="100자 이내로 작성해주세요."
+        android:inputType="textMultiLine"
+        android:maxLength="100"
+        android:background="@drawable/movie_review_edittext_background"
+        android:gravity="top"
+        android:layout_below="@+id/ratingbar_help"
+        android:layout_margin="20dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_review_save_button"
+        android:text="저 장"
+        android:background="@drawable/movie_review_button_background"
+        android:layout_below="@+id/movie_review_edittext"
+        android:layout_toLeftOf="@+id/movie_review_cancel_button"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_review_cancel_button"
+        android:text="취 소"
+        android:background="@drawable/movie_review_button_background"
+        android:layout_below="@+id/movie_review_edittext"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>

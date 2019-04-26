@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieReviewListViewItem">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_image"
+        android:src="@drawable/user1"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_nickname"
+        android:text="jjhvoice"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/profile_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createtime"
+        android:text="10분전"
+        android:layout_below="@+id/profile_nickname"
+        android:layout_alignLeft="@+id/profile_nickname"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbar"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_toRightOf="@+id/createtime"
+        android:layout_alignBottom="@+id/createtime"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_review_contents"
+        android:text="이 영화 너무 재밌습니다."
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/createtime"
+        android:layout_alignLeft="@+id/createtime"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recommendation"
+        android:text="추천"
+        android:layout_below="@+id/movie_review_contents"
+        android:layout_alignLeft="@+id/movie_review_contents"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recommendation_number"
+        android:text="0"
+        android:layout_toRightOf="@+id/recommendation"
+        android:layout_alignBottom="@+id/recommendation"
+        android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:id="@+id/divisionline"
+        android:background="#a9a9a9"
+        android:layout_toRightOf="@+id/recommendation_number"
+        android:layout_alignBottom="@+id/recommendation_number"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:id="@+id/report_button"
+        android:text="신고하기"
+        android:background="#00ff0000"
+        android:layout_toRightOf="@+id/divisionline"
+        android:layout_alignBottom="@+id/divisionline"/>
+
+</RelativeLayout>

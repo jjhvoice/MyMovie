@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="movie_name">위플래쉬</string>
+    <string name="movie_information">2015.03.12 개봉\n드라마 / 106 분</string>
+    <string name="movie_ticket_sales">예매율\n1위 19.3%</string>
+    <string name="movie_rating_number">8.87</string>
+    <string name="movie_audience_number">누적관객수\n1,589,048명</string>
+    <string name="movie_director">감독 데이미언 셔젤</string>
+    <string name="movie_cast">출연 마일즈 텔러(앤드류) J.K 시몬스(플렛처) 멜리사 베노이스트(니콜) 폴 레이저(앤드류 아버지) 오스틴 스토웰(라이언)</string>
+    <string name="rating_voter_number">(2,506명 참여)</string>
+</resources>
